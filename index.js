@@ -40,9 +40,13 @@ displayList()
 
 function addGuest(e) {
   e.preventDefault()
-  guests.push(input.value)
-  input.value = ''
-  displayList()
+  const newGuest = input.value.trim()
+
+  if (newGuest.length > 0) {
+    input.value = ''
+    guests.push(newGuest)
+    displayList()
+  }
 }
 
 function deleteGuest(index) {
