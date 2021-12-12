@@ -2,6 +2,7 @@ const input = document.getElementById('input')
 const listContainer = document.getElementById('list-container')
 
 const btn = document.getElementById('btn')
+btn.addEventListener('click', addGuest)
 
 const guests = [
   'Partner',
@@ -26,6 +27,12 @@ function displayList() {
 }
 
 displayList()
+
+function addGuest() {
+  guests.push(input.value)
+  input.value = ''
+  displayList()
+}
 
 // Tasks:
 // - Write the JS to render the Christmas day guest list in the guest-list element.
