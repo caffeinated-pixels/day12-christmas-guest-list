@@ -61,18 +61,17 @@ input {
 }
 .guest-list {
   color: var(--wine-red);
-  min-width: 240px;
-  max-width: 5ch;
+  min-width: 300px;
   overflow-y: auto;
   overflow-x: hidden;
   background: var(--snow);
-  padding: 1em 2em;
+  padding: 1em 1.25em;
   height: 250px;
 }
 
 li {
   display: flex;
-  padding: 0.25em;
+  padding: 0.25em 0;
   width: 100%;
   text-align: left;
   font-weight: bold;
