@@ -60,7 +60,7 @@ input {
   color: var(--wine-red);
   min-width: 220px;
   max-width: 5ch;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   background: var(--snow);
   padding: 1em 2em;
