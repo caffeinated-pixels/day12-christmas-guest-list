@@ -44,8 +44,10 @@ function addGuest() {
   displayList()
 }
 
-function deleteGuest(i) {
-  console.log(`delete guest ${i}`)
+function deleteGuest(index) {
+  console.log(`delete guest ${index}`)
+  guests.splice(index, 1)
+  displayList()
 }
 
 // Tasks:
