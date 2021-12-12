@@ -50,7 +50,6 @@ function addGuest(e) {
 }
 
 function deleteGuest(index) {
-  console.log(`delete guest ${index}`)
   guests.splice(index, 1)
   displayList()
 }
