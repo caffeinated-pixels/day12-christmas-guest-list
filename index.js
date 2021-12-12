@@ -19,8 +19,18 @@ function displayList() {
 
   guests.forEach((guest, i) => {
     const listItem = document.createElement('li')
-    listItem.textContent = guest
-    listItem.id = i
+    const listText = document.createElement('p')
+
+    listText.textContent = guest
+    listItem.appendChild(listText)
+
+    const deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'X'
+    deleteBtn.className = 'delete-btn'
+    deleteBtn.ariaLabel = 'Delete guest'
+    deleteBtn.addEventListener('click', () => deleteGuest(i))
+
+    listItem.appendChild(deleteBtn)
     guestList.appendChild(listItem)
   })
   listContainer.appendChild(guestList)
@@ -32,6 +42,10 @@ function addGuest() {
   guests.push(input.value)
   input.value = ''
   displayList()
+}
+
+function deleteGuest(i) {
+  console.log(`delete guest ${i}`)
 }
 
 // Tasks:
