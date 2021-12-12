@@ -38,7 +38,8 @@ function displayList() {
 
 displayList()
 
-function addGuest() {
+function addGuest(e) {
+  e.preventDefault()
   guests.push(input.value)
   input.value = ''
   displayList()
